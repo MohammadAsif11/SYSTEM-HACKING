@@ -2,7 +2,7 @@
 # 🔥 System Hacking – Offensive Security Practical Labs  
 
 This repository contains **10 hands-on penetration testing practicals** performed using  
-Kali Linux, Metasploit Framework, Windows exploitation modules, and manual attack techniques.
+Parrot Security, Metasploit Framework, Windows exploitation modules, and manual attack techniques.
 
 ## 📚 Included Practicals
 
